@@ -841,6 +841,11 @@ const IconCaptcha = (function () {
             if (options.security.displayInitialMessage) {
                 _captchaHolder.addEventListener('click', function (e) {
 
+                    // Only process trusted click events.
+                    // See https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted
+                    if (!e.isTrusted)
+                        return;
+
                     // Prevent initialization if the captcha was initialized, or the info link was clicked.
                     if (startedInitialization || e.target instanceof HTMLAnchorElement)
                         return;
@@ -866,6 +871,11 @@ const IconCaptcha = (function () {
         function registerSelectionEvents(captchaSelection) {
 
             const mouseClickEvent = function (e) {
+
+                // Only process trusted click events.
+                // See https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted
+                if (!e.isTrusted)
+                    return;
 
                 // Only allow a user to click after a set click delay.
                 if ((new Date() - generatedInTime) <= options.security.interactionDelay)
