@@ -42,7 +42,7 @@ const IconCaptcha = (function () {
         }
     };
 
-    const homepage = 'https://www.fabianwennink.nl/projects/IconCaptcha';
+    const homepage = 'https://www.fabianwennink.nl/projects/IconCaptcha/';
     const creditText = 'IconCaptcha by Fabian Wennink';
     const checkmarkSVG = '<svg viewBox="0 0 98.5 98.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path class="checkmark" d="M81.7 17.8C73.5 9.3 62 4 49.2 4 24.3 4 4 24.3 4 49.2s20.3 45.2 45.2 45.2 45.2-20.3 45.2-45.2c0-8.6-2.4-16.6-6.5-23.4L45.6 68.2 24.7 47.3" fill="none" stroke-miterlimit="10" stroke-width="8"/></svg>';
     const challengeDimension = { width: 320, height: 50 };
